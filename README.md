@@ -7,6 +7,8 @@ The foundation founder is [Emma Kok](https://www.emmakok.nl).
 
 On the 05/01/2024 Emma starts a world tour with [André Rieu and Johann Strauss Orchestra](https://www.andrerieu.com).
 
+On the 06/01/2024 there are a feast of Epiphany, and Sophie's Kok, a sister of Emma, 19th Birthday (she is 18). Therefore, the version 0.1.1.0 is devoted also to her.
+
 Besides, you can support Ukraine and Ukrainian people. 
 
 All support is welcome, including donations for the needs of the Ukrainian army, IDPs and refugees.

@@ -8,7 +8,7 @@
 --
 -- The function 'mapI' is taken from the [mmsyn5](https://hackage.haskell.org/package/mmsyn5) package. This inspired some more general functionality.
 
-{-# LANGUAGE NoImplicitPrelude #-}
+{-# LANGUAGE NoImplicitPrelude, BangPatterns #-}
 {-# OPTIONS_HADDOCK -show-extensions #-}
 
 
@@ -19,7 +19,9 @@ module Data.IntermediateStructures1
        , map2I
     -- * Generalized construction functions for some other ones (generative functions)
        , inter
+       , inter'
        , swapinter
+       , swapinter'
   )
 where
 
@@ -46,4 +48,14 @@ inter fb fc f3d x = f3d x (fb x) (fc x)
 swapinter :: (a -> c) -> (a -> b) -> (a -> b -> c -> d) -> a -> d
 swapinter fc fb f3d x = f3d x (fb x) (fc x)
 {-# INLINE swapinter #-}
+
+-- | A variant of 'inter' with \'stricter\' calculation scheme. Can be in many cases more efficient.
+inter' :: (a -> b) -> (a -> c) -> (a -> b -> c -> d) -> a -> d
+inter' fb fc f3d !x = f3d x (fb x) (fc x) 
+{-# INLINE inter' #-}
+
+-- | A variant of the 'swapinter' with \'stricter\' calculation scheme. Can be in many cases more efficient.
+swapinter' :: (a -> c) -> (a -> b) -> (a -> b -> c -> d) -> a -> d
+swapinter' fc fb f3d !x = f3d x (fb x) (fc x)
+{-# INLINE swapinter' #-}
 
