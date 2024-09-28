@@ -8,3 +8,7 @@
 
 * First version revised A. Added two new functions.
 
+## 0.1.2.0 -- 2024-09-28
+
+* First version revised B. Some code changes that reduce a generated stg code.
+
