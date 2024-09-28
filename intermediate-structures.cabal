@@ -1,6 +1,6 @@
 cabal-version:      3.0
 name:               intermediate-structures
-version:            0.1.1.0
+version:            0.1.2.0
 synopsis:
     Some simple functions to deal with transformations from structures to other ones, basically lists.
 
@@ -19,7 +19,7 @@ build-type:         Simple
 extra-doc-files:    CHANGELOG.md, README.md
 
 common warnings
-    ghc-options: -Wall
+    ghc-options: -O
 
 library
     import:           warnings
